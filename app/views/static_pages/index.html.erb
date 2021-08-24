@@ -3,56 +3,31 @@
 <h1>The Incredible Music Box</h1>
 
 <div>
-<div class="key" id="k81">
-  <kbd>q</kbd>
-  <span>boom</span>
+  <div class="key" id="k81">
+    <kbd>q</kbd>
+    <span>boom</span>
+  </div>
+  <div class="key" id="k83">
+    <kbd>s</kbd>
+      <span>clap</span>
+  </div>
+  <div class="key" id="k68">
+    <kbd>d</kbd>
+        <span>hihat</span>
+  </div>
+  <div class="key" id="k70">
+    <kbd>f</kbd>
+          <span>kick</span>
+  </div>
+  <div class="key" id="k71">
+    <kbd>g</kbd>
+    <span>openhat</span>
+  </div>
 </div>
-<div class="key" id="k83">
-  <kbd>s</kbd>
-    <span>clap</span>
-</div>
-<div class="key" id="k68">
-  <kbd>d</kbd>
-      <span>hihat</span>
-</div>
-<div class="key" id="k70">
-  <kbd>f</kbd>
-        <span>kick</span>
-</div>
-<div class="key" id="k71">
-  <kbd>g</kbd>
-  <span>openhat</span>
 
-</div>
-
-
-<%# <img src ="/app/assets/images/hello.png"> %>
-<%# <audio data-key="81" src="/audios/boom.wav"></audio> %>
-<%# <%= image_path('hello.png') %>
 <%= audio_tag "boom.wav", id:"audio81" %>
 <%= audio_tag "clap.wav", id:"audio83" %>
 <%= audio_tag "hihat.wav", id:"audio68" %>
 <%= audio_tag "kick.wav", id:"audio70" %>
 <%= audio_tag "openhat.wav", id:"audio71" %>
 
-
-<script>
-  const keys = document.getElementsByClassName('key')
-
-  let boom = document.querySelector("#audio81")
-  let clap = document.querySelector("#audio83")
-  let hihat = document.querySelector("#audio68")
-  let kick = document.querySelector("#audio70")
-  let openhat = document.querySelector("#audio71")
-
-
-   document.addEventListener('keydown',(e)=> {
-     const audio = document.querySelector(`#audio${e.keyCode}`)
-     const key = document.querySelector(`#k${e.keyCode}`)
-     if(!audio) return;
-     audio.currentTime = 0;
-     audio.play()
-     key.classList.add('play')
-   })
-
-</script>
