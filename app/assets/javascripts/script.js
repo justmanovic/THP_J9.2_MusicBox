@@ -1,5 +1,3 @@
-let keys = document.getElementsByClassName('key')
-
 let boom = document.querySelector("#audio81")
 let clap = document.querySelector("#audio83")
 let hihat = document.querySelector("#audio68")
