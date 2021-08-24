@@ -1,0 +1,35 @@
+body{
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+body > div {
+  display: flex;
+  gap:1rem;
+}
+
+.key{
+  height: 5rem;
+  width: 5rem;
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  /* transition: .25s all; */
+}
+
+.key.play {
+  border:6px rgb(214, 182, 0) solid;
+  transform:scale(1.05);
+}
+
+.key:hover{
+  opacity: .7;
+}
+
+kbd{
+  font-size: 3rem;
+}
