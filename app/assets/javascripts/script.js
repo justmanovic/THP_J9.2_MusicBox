@@ -1,4 +1,4 @@
-const keys = document.querySelectorAll('.key')
+let keys = document.getElementsByClassName('key')
 
 let boom = document.querySelector("#audio81")
 let clap = document.querySelector("#audio83")
